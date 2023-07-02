@@ -9,6 +9,36 @@ body{
   margin: 0 auto;
 }
 
+.address {
+  line-height: 24.3px;
+  .address__list{
+    list-style-type: none;
+    padding: 2px 1px 0 0;
+    .address__list-link{
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+.menu{
+  .menu__links-list{
+    display: flex;
+    list-style-type: circle;
+    gap: 32px;
+    .menu__links-list-item:first-child{
+      list-style: none;
+    }
+    .menu__link{
+      text-decoration: none;
+      border-bottom: 1px solid $main_black;
+    }
+    .menu__link_active{
+      border-bottom: none;
+    }
+  }
+}
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -17,39 +47,11 @@ body{
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  .header__menu{
-    .header__links-list{
-      display: flex;
-      list-style-type: circle;
-      gap: 32px;
-      .header__links-list-item:first-child{
-        list-style: none;
-      }
-      .header__link{
-        text-decoration: none;
-        border-bottom: 1px solid $main_black;
-      }
-      .header__link_active{
-        border-bottom: none;
-      }
-    }
-  }
   .header__logo{
     display: block;
     width: 140px;
     height: 105px;
     margin-right: 150px;
-  }
-  .address {
-    line-height: 24.3px;
-    .header__address{
-      list-style-type: none;
-      padding: 2px 1px 0 0;
-      .header__address-link{
-        text-decoration: none;
-        border-bottom: 1px solid black;
-      }
-    }
   }
 }
 
@@ -255,5 +257,34 @@ body{
 }
 
 .footer{
-
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 10px;
+  .address{
+    .footer__address{
+      letter-spacing: 1px;
+    }
+  }
+  .footer__menu{
+    .footer__links-list{
+      flex-direction: column;
+      text-align: center;
+      padding-left: 8px;
+      gap: 3px;
+      letter-spacing: 1px;
+    }
+  }
+  .footer__socials-list{
+    .footer__social-list-item{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      .footer__social-link{
+        width: 48px;
+        height: 48px;
+        display: block;
+      }
+    }
+  }
 }
