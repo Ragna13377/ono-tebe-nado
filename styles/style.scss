@@ -1,6 +1,7 @@
 $main_black: #000;
 
-body{
+page{
+  margin: 0;
   padding: 92px 50px 90px;
 }
 
@@ -280,6 +281,7 @@ body{
       display: flex;
       align-items: center;
       gap: 50px;
+      list-style: none;
       .footer__social-link{
         display: block;
         width: 48px;
