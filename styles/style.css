@@ -264,13 +264,15 @@ body {
   letter-spacing: 1px;
   text-align: center;
 }
-.footer .footer__socials-list .footer__social-list-item {
+.footer .footer__navigation .footer__social-list {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.footer .footer__socials-list .footer__social-list-item .footer__social-link {
+.footer .footer__navigation .footer__social-list .footer__social-link {
   display: block;
   width: 48px;
   height: 48px;
 }
+
+/*# sourceMappingURL=../OSPanel/domains/dev/ono-tebe-nado/styles/style.css.map */
