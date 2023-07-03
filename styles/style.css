@@ -121,6 +121,10 @@
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
+  word-spacing: 17px;
+}
+.cover .cover__description .cover__description-text .word-spacing-extended {
+  word-spacing: 23px;
 }
 
 .bet-button {
@@ -133,6 +137,7 @@
   text-align: center;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .card-link {
@@ -182,8 +187,7 @@
 }
 .lots .lots__look-more-link {
   display: block;
-  margin-top: 30px;
-  padding-left: 40px;
+  margin: 30px 0 0 40px;
   font-weight: 400;
   font-size: 20px;
   line-height: normal;
@@ -230,6 +234,7 @@
 .about .about__title {
   grid-area: title;
   align-self: center;
+  margin-top: 5px;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
