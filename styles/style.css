@@ -41,14 +41,14 @@
   justify-content: space-between;
   align-items: center;
   color: #000;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: normal;
 }
 .header .header__logo {
   display: block;
-  width: 140px;
-  height: 105px;
+  max-width: 140px;
+  max-height: 105px;
   margin-right: 150px;
 }
 
@@ -82,7 +82,7 @@
   color: #fff;
   text-transform: uppercase;
 }
-.cover .header__overlay {
+.cover .cover__overlay {
   inset: 0 0 0 -50px;
   width: calc(100% + 100px);
   background: url("../images/cover.jpg") lightgrey 50%/cover no-repeat;
@@ -110,9 +110,9 @@
 }
 .cover .cover__description {
   display: flex;
-  gap: 78px;
   justify-content: end;
   align-items: center;
+  gap: 78px;
 }
 .cover .cover__description .cover__description-text {
   display: flex;
@@ -147,11 +147,11 @@
   flex-grow: 1;
   justify-content: space-between;
   gap: 25px;
-  width: 430px;
+  max-width: 430px;
   height: 100%;
   min-height: 450px;
-  color: #fff;
   padding: 50px 40px;
+  color: #fff;
 }
 .card-link .card .card__title {
   font-weight: 700;
@@ -167,12 +167,12 @@
 }
 
 .lots .lots__heading {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: normal;
   margin-bottom: 27px;
   padding-left: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: normal;
+  text-transform: uppercase;
 }
 .lots .lots__card-list {
   display: flex;
@@ -189,15 +189,15 @@
   line-height: normal;
 }
 .lots .lots__overlay-1 {
-  background: url("../images/card-lot-01.jpg");
+  background: url("../images/card-lot-01.jpg") lightgray 50%/cover no-repeat;
   filter: brightness(0.5);
 }
 .lots .lots__overlay-2 {
-  background: url("../images/card-lot-02.jpg");
+  background: url("../images/card-lot-02.jpg") lightgray 50%/cover no-repeat;
   filter: brightness(0.5);
 }
 .lots .lots__overlay-3 {
-  background: url("../images/card-lot-03.jpg");
+  background: url("../images/card-lot-03.jpg") lightgray 50%/cover no-repeat;
   filter: brightness(0.5);
 }
 
@@ -217,8 +217,8 @@
 }
 .about .about__logo .about__logo-container {
   grid-area: logo;
-  width: 240px;
-  height: 240px;
+  max-width: 240px;
+  max-height: 240px;
   border-radius: 50%;
   padding: 63px 46px;
   background: black;
@@ -264,6 +264,7 @@
   padding-left: 8px;
   letter-spacing: 1px;
   text-align: center;
+  list-style: none;
 }
 .footer .footer__navigation .footer__social-list {
   display: flex;
@@ -273,8 +274,8 @@
 }
 .footer .footer__navigation .footer__social-list .footer__social-link {
   display: block;
-  width: 48px;
-  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=../OSPanel/domains/dev/ono-tebe-nado/styles/style.css.map */
