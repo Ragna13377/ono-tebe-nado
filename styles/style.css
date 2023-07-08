@@ -70,26 +70,22 @@
 
 .overlay {
   position: absolute;
-  inset: 0 0;
-  z-index: -1;
+  inset: 0;
   width: 100%;
   height: 100%;
+  background: #121212 50%;
+  opacity: 0.6;
+  z-index: 0;
 }
 
 .cover {
   position: relative;
   padding: 165px 50px 50px;
-  margin: 0 -50px;
+  margin-left: -50px;
+  margin-right: -50px;
   color: #fff;
   text-transform: uppercase;
   background: url("../images/cover.jpg");
-}
-.cover .cover__overlay {
-  inset: 0;
-  width: 100%;
-  background: #121212 50%;
-  opacity: 0.6;
-  z-index: 0;
 }
 .cover .cover__title {
   flex-direction: column;
@@ -172,11 +168,15 @@
   line-height: 120%;
   text-decoration: underline;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 .card-link .card .card__text {
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
+  position: relative;
+  z-index: 1;
 }
 
 .lots .lots__heading {
@@ -201,17 +201,14 @@
   line-height: normal;
   display: block;
 }
-.lots .lots__overlay-1 {
+.lots .card-1 {
   background: url("../images/card-lot-01.jpg") lightgray 50%/cover no-repeat;
-  filter: brightness(0.5);
 }
-.lots .lots__overlay-2 {
+.lots .card-2 {
   background: url("../images/card-lot-02.jpg") lightgray 50%/cover no-repeat;
-  filter: brightness(0.5);
 }
-.lots .lots__overlay-3 {
+.lots .card-3 {
   background: url("../images/card-lot-03.jpg") lightgray 50%/cover no-repeat;
-  filter: brightness(0.5);
 }
 
 .about {
