@@ -15,7 +15,6 @@ $main_black: #000;
   line-height: 24.3px;
 
   .address__list {
-    padding: 2px 1px 0 0;
     list-style-type: none;
 
     .address__list-link {
@@ -82,34 +81,33 @@ $main_black: #000;
 .overlay {
   position: absolute;
   inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
-  background: #121212 50%;
   opacity: 0.6;
-  z-index: 0;
+  background: #121212 50%;
 }
 
 .cover {
   position: relative;
-  padding: 165px 50px 50px;
-  margin-left: -50px;
   margin-right: -50px;
+  margin-left: -50px;
+  padding: 165px 50px 50px;
   color: #fff;
   text-transform: uppercase;
   background: url("../images/cover.jpg");
 
   .cover__title {
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     gap: 20px;
-    margin-top: 10px;
     margin-bottom: 135px;
     font-weight: 700;
     font-size: 100px;
     line-height: 100%;
     letter-spacing: 30px;
     display: flex;
-    position: relative;
-    z-index: 1;
 
     .line-height-extended {
       line-height: 115%;
@@ -117,7 +115,7 @@ $main_black: #000;
 
     .position-relative {
       position: relative;
-      left: -24px;
+      left: -23px;
     }
 
     .position-fix {
@@ -126,12 +124,12 @@ $main_black: #000;
   }
 
   .cover__description {
+    position: relative;
+    z-index: 1;
     justify-content: end;
     align-items: center;
     gap: 78px;
     display: flex;
-    position: relative;
-    z-index: 1;
 
     .cover__description-text {
       gap: 23px;
@@ -181,45 +179,47 @@ $main_black: #000;
     display: flex;
 
     .card__title {
+      position: relative;
+      z-index: 1;
       font-weight: 700;
       font-size: 22px;
       line-height: 120%;
       text-decoration: underline;
       text-transform: uppercase;
-      position: relative;
-      z-index: 1;
     }
 
     .card__text {
+      position: relative;
+      z-index: 1;
       font-weight: 400;
       font-size: 20px;
       line-height: 120%;
-      position: relative;
-      z-index: 1;
     }
   }
 }
 
 .lots {
+  padding-top: 5px;
+
   .lots__heading {
     margin-bottom: 27px;
     padding-left: 40px;
     font-weight: 700;
     font-size: 40px;
-    line-height: normal;
+    line-height: 100%;
     text-transform: uppercase;
   }
 
   .lots__card-list {
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 25px;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
   }
 
   .lots__look-more-link {
-    margin: 30px 0 0 40px;
+    margin: 35px 0 0 40px;
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
@@ -240,25 +240,26 @@ $main_black: #000;
 }
 
 .about {
-  grid-template-columns: 32% 68%;
-  grid-template-rows: repeat(2, 240px);
-  grid-template-areas:
-  "logo title"
-  ". text";
+  grid-template-columns: 430px 1fr;
+  grid-template-rows: 480px;
   -moz-column-gap: 25px;
   -webkit-column-gap: 25px;
   column-gap: 25px;
   line-height: 100%;
   display: grid;
 
-  .about__logo {
-    justify-self: center;
-    align-self: center;
-    grid-area: logo;
+  .about__column {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    display: grid;
+  }
 
+  .about__logo {
     .about__logo-container {
       max-width: 240px;
       max-height: 240px;
+      margin: 0 auto;
       border-radius: 50%;
       padding: 63px 46px;
       background: black;
@@ -271,27 +272,23 @@ $main_black: #000;
   }
 
   .about__title {
-    grid-area: title;
-    align-self: center;
-    margin-top: 5px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
   }
 
-  .about__text {
+  .about__description {
     flex-direction: column;
-    grid-area: text;
-    place-self: start;
+    justify-content: space-between;
     gap: 25px;
+    height: 100%;
     padding-top: 7px;
     display: flex;
 
-    .about__column {
-      padding-right: 25px;
+    .about__text {
       font-weight: 400;
       font-size: 20px;
-      line-height: 1.2;
+      line-height: 112%;
     }
   }
 }
@@ -299,7 +296,7 @@ $main_black: #000;
 .footer {
   justify-content: space-between;
   align-items: start;
-  padding-top: 10px;
+  padding-top: 5px;
   display: flex;
 
   .address {
@@ -311,11 +308,15 @@ $main_black: #000;
   .footer__menu {
     .footer__links-list {
       flex-direction: column;
-      gap: 3px;
+      gap: 0;
       padding-left: 8px;
       letter-spacing: 1px;
       text-align: center;
       list-style: none;
+
+      .footer__links-list-item {
+        line-height: 140%;
+      }
     }
   }
 
