@@ -78,15 +78,18 @@
 
 .cover {
   position: relative;
-  padding: 165px 0 50px;
+  padding: 165px 50px 50px;
+  margin: 0 -50px;
   color: #fff;
   text-transform: uppercase;
+  background: url("../images/cover.jpg");
 }
 .cover .cover__overlay {
-  inset: 0 0 0 -50px;
-  width: calc(100% + 100px);
-  background: url("../images/cover.jpg") lightgrey 50%/cover no-repeat;
-  filter: brightness(0.5);
+  inset: 0;
+  width: 100%;
+  background: #121212 50%;
+  opacity: 0.6;
+  z-index: 0;
 }
 .cover .cover__title {
   flex-direction: column;
@@ -98,6 +101,8 @@
   line-height: 100%;
   letter-spacing: 30px;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .cover .cover__title .line-height-extended {
   line-height: 115%;
@@ -114,6 +119,8 @@
   align-items: center;
   gap: 78px;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .cover .cover__description .cover__description-text {
   gap: 23px;
